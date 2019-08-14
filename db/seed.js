@@ -1,11 +1,11 @@
-const Translation = require('./models')
-const translationData = require('./translation-data.json')
+const Movie = require('./models')
+const movieData = require('./data.json')
 
-Translation.remove({})
+Movie.remove({})
   .then(() => {
-    Translation.create(translationData)
-      .then((translations) => {
-        console.log(translations)
+    Movie.create(movieData)
+      .then((movies) => {
+        console.log(movies)
         process.exit()
       })
   })

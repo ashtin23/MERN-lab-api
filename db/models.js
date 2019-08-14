@@ -1,9 +1,10 @@
 const mongoose = require('./connection.js')
+const Schema = mongoose.Schema
 
-const TranslationSchema = new mongoose.Schema({
-  text: String,
-  audioSource: String
+const Movie = new Schema({
+  movie: String,
+  year: Number
 })
 
 
-module.exports = mongoose.model("Translation", TranslationSchema)
+module.exports = mongoose.model("Movie", Movie)
