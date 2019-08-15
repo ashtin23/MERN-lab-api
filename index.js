@@ -42,6 +42,16 @@ app.get('/api/movies', (req, res) => {
       })
   })
 
+  app.put('/api/movies/:id', (req, res) => {
+      Movie.findById(req.params.id)
+      .then((movie) => {
+          res.json(movie)
+      })
+      .catch((err) => {
+          console.log(err)
+      })
+  })
+
 app.set("", )
 
 app.listen(app.get("port"), () => {
