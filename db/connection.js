@@ -5,7 +5,7 @@ let mongoURI = "";
 if (process.env.NODE_ENV === "production") {
     mongoURI = process.env.DB_URL;
   } else {
-    mongoURI = "mongodb://localhost/api-translations";
+    mongoURI = "mongodb://localhost/api-movies";
   }
 
   mongoose
